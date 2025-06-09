@@ -9,13 +9,16 @@ This Python script searches for occurrences of a given DNA motif in a FASTA geno
 * Supports DNA motifs with IUPAC ambiguity codes (e.g. N, V, H, D, B, M, R, W, S, Y, K).
 * Outputs BED file with motif locations and matched sequences.
 * Supports output compression with `.gz` extension.
+* Progress bar shows processing progress based on total bases for smooth tracking.
 * Prints summary of total matches and elapsed runtime.
 * Minimal dependencies (`biopython` required).
 
-## Requirements
+## Installation
 
-* Python 3.x
-* Biopython library (`pip install biopython`)
+```bash
+# Python 3.x
+pip install biopython tqdm
+```
 
 ## Usage
 
@@ -72,7 +75,7 @@ chrom  start  end  name  score  strand  matched_sequence
 Search for motif "GATC" on both strands and save compressed output:
 
 ```bash
-python find_motif.py --fasta dm6.fa --out dm6_GATC_motifs.bed.gz --motif GATC --reverse
+python find_motif.py --fasta dm6.fa --out dm6_GATC_motifs.bed.gz --motif GATC
 ```
 
 Search for a motif with ambiguity codes:
