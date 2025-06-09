@@ -72,7 +72,7 @@ chrom  start  end  name  score  strand  matched_sequence
 
 ## Example
 
-Search for motif "GATC" on both strands and save compressed output:
+Search for motif "GATC" on plus strands and save compressed output:
 
 ```bash
 python find_motif.py --fasta dm6.fa --out dm6_GATC_motifs.bed.gz --motif GATC
