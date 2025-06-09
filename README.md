@@ -72,13 +72,13 @@ chrom  start  end  name  score  strand  matched_sequence
 
 ## Example
 
-Search for motif "GATC" on plus strands and save compressed output:
+Search for motif "GATC" on the plus strand and save compressed output:
 
 ```bash
 python find_motif.py --fasta dm6.fa --out dm6_GATC_motifs.bed.gz --motif GATC
 ```
 
-Search for a motif with ambiguity codes:
+Search for a motif with ambiguity codes on both strands:
 
 ```bash
 python find_motif.py --fasta genome.fa --out motifs.bed --motif NVH --reverse
