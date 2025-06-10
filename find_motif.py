@@ -57,7 +57,8 @@ def find_motifs(fasta_file, output_bed, motif, search_reverse=False):
 
     start_time = time.time()
     with open_func(output_bed, "wt") as out:
-        with tqdm(total=total_bases, desc="Processing bases") as pbar:
+        # The line below has been updated to include units
+        with tqdm(total=total_bases, desc="Processing", unit='B', unit_scale=True, unit_divisor=1024) as pbar:
             for record in SeqIO.parse(fasta_file, "fasta"):
                 chrom = record.id
                 seq = str(record.seq).upper()
